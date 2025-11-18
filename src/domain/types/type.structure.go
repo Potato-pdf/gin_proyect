@@ -1,7 +1,6 @@
 package types
 
-type ajolotes struct{
-	nombre string `json: "nombre"`
-	color string `json: "nombre"`
-	
+type Ajolotes struct {
+    Nombre string `json:"nombre"`
+    Color  string `json:"color"`
 }
