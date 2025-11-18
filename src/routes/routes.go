@@ -13,9 +13,9 @@ func SetupRouter() *gin.Engine{
 	RoutesGroup.GET("/", func(ctx *gin.Context) {
 		ctx.JSON(http.StatusOK, gin.H{
 			"SAS":"Down",
+		})
 	})
-	})
-	RoutesGroup.GET("/spotify/:contex", func(ctx *gin.Context) {
+	RoutesGroup.GET("/spotify/:context", func(ctx *gin.Context) {
 		nombre := ctx.Param("context")
 		ctx.String(http.StatusOK, "Que es dios? %s", nombre)
 	})
