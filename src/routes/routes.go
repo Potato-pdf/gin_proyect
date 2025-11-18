@@ -18,4 +18,8 @@ func SetupRouter(r *gin.Engine) {
 		nombre := ctx.Param("context")
 		ctx.String(http.StatusOK, "Que es dios? %s", nombre)
 	})
+
+	RoutesGroup.POST("/create", func(ctx *gin.Context) {
+		var nuevoPrefijo 
+	})
 }
