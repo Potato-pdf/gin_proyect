@@ -7,8 +7,7 @@ import (
 )
 
 
-func SetupRouter() *gin.Engine{
-	r := gin.New()
+func SetupRouter(r *gin.Engine) {
 	RoutesGroup:= r.Group("/prefijo")
 	RoutesGroup.GET("/", func(ctx *gin.Context) {
 		ctx.JSON(http.StatusOK, gin.H{
@@ -19,5 +18,4 @@ func SetupRouter() *gin.Engine{
 		nombre := ctx.Param("context")
 		ctx.String(http.StatusOK, "Que es dios? %s", nombre)
 	})
-	return r
 }
