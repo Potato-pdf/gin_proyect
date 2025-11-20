@@ -3,7 +3,7 @@ package routes
 import (
 	"net/http"
 
-	"Gin/src/domain/types"
+	"Gin/src/controller"
 
 	"github.com/gin-gonic/gin"
 )
@@ -20,15 +20,5 @@ func SetupRouter(r *gin.Engine) {
 		ctx.String(http.StatusOK, "Que es dios? %s", nombre)
 	})
 
-	RoutesGroup.POST("/create", func(ctx *gin.Context) {
-		var nuevoPrefijo types.Prefijo
-		if err := ctx.ShouldBindJSON(&nuevoPrefijo); err != nil {
-			ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
-			return
-		}
-		ctx.JSON(http.StatusOK, gin.H{
-			"message": "Recibido",
-			"data":    nuevoPrefijo,
-		})
-	})
+	RoutesGroup.POST("/create", controller.CreatePrefijo)
 }
