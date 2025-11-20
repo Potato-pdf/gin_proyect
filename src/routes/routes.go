@@ -20,6 +20,6 @@ func SetupRouter(r *gin.Engine) {
 	})
 
 	RoutesGroup.POST("/create", func(ctx *gin.Context) {
-		var nuevoPrefijo 
+		var nuevoPrefijo  
 	})
 }
