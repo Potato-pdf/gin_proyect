@@ -4,12 +4,12 @@ import (
 	"Gin/src/routes"
 
 	"github.com/gin-gonic/gin"
-) 
+)
 
-func main (){
+func main() {
 
 	r := gin.New()
 	routes.SetupRouter(r)
-	r.Run(":8000")
+	r.Run(":3000")
 
 }
