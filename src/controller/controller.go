@@ -1,7 +1,7 @@
 package controller
 
 import (
-	"Gin/src/domain/types"
+	types "Gin/src/domain/types/ajolotes"
 	"net/http"
 
 	"github.com/gin-gonic/gin"

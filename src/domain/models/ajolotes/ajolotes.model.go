@@ -6,4 +6,5 @@ type Ajolote struct {
 	gorm.Model
 	Nombre string
 	Color  string
+	Task   []Task
 }
