@@ -8,8 +8,8 @@ import (
 
 type User struct {
 	gorm.Model
-	Name     string      `json:"name"`
-	Email    string      `json:"email" gorm:"unique"`
-	Password string      `json:"-"`
-	Tasks    []task.Task `json:"tasks"`
+	Name     string      `gorm:"not null"`
+	Email    string      `gorm:"not null;unique"`
+	Password string      `gorm:"not null"`
+	Tasks    []task.Task `gorm:"foreignKey:UserID;references:ID"`
 }

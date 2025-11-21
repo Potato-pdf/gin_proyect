@@ -11,5 +11,5 @@ type Ajolote struct {
 	Id     string      `gorm:"primaryKey;not null"`
 	Nombre string      `gorm:"not null"`
 	Color  string      `gorm:"not null"`
-	Task   []task.Task `gorm:"foreignKey:UserID;references:ID"`
+	Task   []task.Task `gorm:"foreignKey:AjoloteID;references:Id"`
 }
