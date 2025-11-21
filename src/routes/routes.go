@@ -13,4 +13,3 @@ func SetupRouter(r *gin.Engine) {
 	RoutesGroup.POST("/create", controller.CreatePrefijo)
 	RoutesGroup.POST("/ajolote", controller.CreateAjolote)
 }
-kk
