@@ -2,6 +2,7 @@ package main
 
 import (
 	"Gin/db"
+	models "Gin/src/domain/models"
 	"Gin/src/routes"
 	"fmt"
 
@@ -15,6 +16,9 @@ func main() {
 		panic("Failed to connect to database")
 	}
 	fmt.Println("Connected to database")
+
+	//Migrations
+	DBConnection.AutoMigrate(&models.User{}, &models.Ajolote{}, &models.Task{})
 
 	//**! Router
 	r := gin.New()
